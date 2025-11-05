@@ -1,0 +1,391 @@
+/* ==========================
+   VARIÁVEIS DE CORES E BASE
+========================== */
+:root {
+  --bg: #ffffff;
+  --card: #f7f5f5;
+  --accent: #000000;
+  --text: #000000;
+  --muted: #000000;
+
+  --radius: 10px;
+  --max-width: 1000px;
+  --gap: 1.25rem;
+}
+
+/* ==========================
+   RESET E CONFIGURAÇÕES GERAIS
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ==========================
+   CABEÇALHO (HEADER)
+========================== */
+#site-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 0;
+}
+
+#site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#site-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+#main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+#main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#main-nav a:hover {
+  color: var(--accent);
+}
+
+/* ==========================
+   SEÇÕES GERAIS
+========================== */
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: var(--gap);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ==========================
+   SEÇÃO SOBRE
+========================== */
+#sobre img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+/* ==========================
+   HABILIDADES
+========================== */
+#habilidades ul {
+  list-style: square;
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ==========================
+   PROJETOS
+========================== */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.projeto {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(214, 106, 74, 0.2);
+}
+
+.projeto img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* ==========================
+   FORMULÁRIO DE CONTATO
+========================== */
+#form-contato {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-contato label {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+#form-contato input,
+#form-contato textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text);
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* ==========================
+   FORMULÁRIO — EFEITO DE FOCO
+========================== */
+#form-contato input:focus,
+#form-contato textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(214, 106, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+.btn {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #8c8c8c;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--muted);
+}
+
+.btn.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ==========================
+   REDES SOCIAIS
+========================== */
+.redes-sociais {
+  margin-top: 2rem;
+}
+
+.redes-sociais h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.redes-sociais ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.redes-sociais a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.redes-sociais a:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+#site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ==========================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================== */
+
+/* Tablets (até 900px) */
+@media (max-width: 900px) {
+  #site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .perfil {
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  #site-title {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .redes-sociais ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .redes-sociais a {
+    text-align: center;
+  }
+}
+
+/* ==========================
+   ANIMAÇÕES SUAVES
+========================== */
+
+/* Animação de fade-in global */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica em seções */
+section {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Efeito hover em links */
+a {
+  transition: color 0.3s, transform 0.2s;
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+/* Transição global nos cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(214, 106, 74, 0.15);
+}
+
+/* ==========================
+   DETALHES VISUAIS (PSEUDO-ELEMENTOS)
+========================== */
+
+/* Linha decorativa antes dos títulos das seções */
+h2::before {
+  content: "✦";
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* Destaque ao passar o mouse nos títulos dos projetos */
+.projeto h3::after {
+  content: " 🚀";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projeto:hover h3::after {
+  opacity: 1;
+}
+
+/* Estilo visual no título principal */
+#site-title::after {
+  content: " | Portfólio";
+  font-size: 1rem;
+  color: var(--muted);
+  margin-left: 5px;
+}
+
+/* Ícone decorativo na seção Contato */
+#contato::before {
+  content: "📬";
+  font-size: 1.2rem;
+  margin-right: 6px;
+  color: var(--accent);
+}

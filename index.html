@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Aula 08</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="site-header">
+        <div class="container">
+            <h1 id="site-title">Dilnatã</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main id="main-content" class="container">
+        <!-- About -->
+        <section id="sobre" class="card"+>
+            <img src="assets/images/IMG20210110175538.jpg" alt="Foto de perfil" class="perfil" />
+            <div>
+                <h2>Sobre mim</h2>
+                <p>Sou <strong>Dilnatã</strong>, tenho 25 anos e moro em Salvador. 
+                Tenho como objetivo crescer profissionalmente na carreira de programação,
+                me desenvolver em comunicação e capitalizar investimentos e grandes projetos.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="habilidades" class="card">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 (Flexbox, Grid)</li>
+                <li>Responsividade / Media Queries</li>
+                <li>JavaScript básico</li>
+                <li>Python (Tornado, PostgreSQL)</li>
+            </ul>
+        </section>
+        <!-- Projects -->
+        <section id="projetos" class="card">
+            <h2>Projetos</h2>
+            <div class="projetos-grid">
+                <!-- cada projeto será um article -->
+                 <article class="projeto">
+                    <img src="assets/projects/python1.png" alt="Projeto 1" />
+                    <h3>Sistema de Estoque em Python</h3>
+                    <p>CRUD completo desenvolvido com Tornado e PostgreSQL, permitindo cadastro e controle de produtos.</p>
+                 </article>
+                 
+                 <article class="projeto">
+                    <img src="assets/projects/python2.png" alt="Projeto 2" />
+                    <h3>To-Do List em Python</h3>
+                    <p>Aplicação interativa em Python com interface de linha de comando e biblioteca Tabulate.</p>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Contact / Form -->
+        <section id="contato" class="card">
+            <h2>Contato</h2>
+            <form action="#" method="post" id="form-contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required />
+                
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" required />
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="reset" class="btn secondary">Limpar</button>
+                </div>
+            </form>
+            <div class="redes-sociais">
+                <h3>Minhas Redes</h3>
+                <ul>
+                    <li><a href="https://github.com/Dilnata" target="_blank">🐙GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/dilnat%C3%A3-novaes-gomes-786620292/?originalSubdomain=br" target="_blank">💼 LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/dilnatang/?utm_source=qr&igsh=MXZuZjYzYjFlMnhiNQ%3D%3D#" target="_blank">📸 Instagram</a></li>
+                </ul>
+            </div>
+        </section>    
+    </main>
+
+    <!-- Footer -->
+     <footer id="site-footer">
+        <div class="container">
+            <p>&copy; <span id="ano"></span> - Dilnatã. Todos os direitos reservados.</p>
+        </div>
+     </footer>
+
+     <script src="js/main.js"></script>
+</body>
+</html>
